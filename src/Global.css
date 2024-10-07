@@ -1,12 +1,12 @@
 
 :root{
-  --secondary-color: rgb(0, 0, 0);
-  --primary-color: #414995;
+  --secondary-color: #6e6cc1;
+  --primary-color: #6e6cc1;
   --link-hover: #292929;
   --mobile-menu-color: #292929;
 
   --text-color: rgb(213, 213, 213);
-  --border-color: rgb(167, 167, 167);
+  --border-color: transparent;
 
 }
 

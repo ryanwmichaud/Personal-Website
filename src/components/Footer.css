@@ -12,7 +12,7 @@
     font-size: 12px;
     text-align: center;
     background-color: var(--secondary-color);
-    color: var(--primary-color);
+    color: var(--text-color);
     border-top: solid var(--border-color);
 
 
@@ -24,12 +24,12 @@
 }
 
 .footer-link{
-    color: var(--primary-color);
+    color: var(--text-color);
     cursor: pointer;
     padding-left: 3px;
     padding-right: 3px;
 }
 .footer-link:hover{
-    color: var(--text-color);
+    color: var(--link-hover);
     cursor: pointer;
 }
