@@ -3,30 +3,18 @@
 
 
 .page{
-    margin-top: 70px;
+    margin-top: 50px;
     background-color: var(--primary-color);
-    padding: 40px;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .home-title{
     font-size: 50px;
 }
 
-.bottom-page{
-    background-color: var(--primary-color);
-    padding: 40px;
-    color: var(--text-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    padding-bottom: 100px;
-}
 
 .top{
     display: flex;

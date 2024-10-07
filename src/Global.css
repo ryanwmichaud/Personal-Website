@@ -2,11 +2,12 @@
 :root{
   --secondary-color: #6e6cc1;
   --primary-color: #6e6cc1;
-  --link-hover: #292929;
+  --link-hover: #cbba37;
   --mobile-menu-color: #292929;
 
   --text-color: rgb(213, 213, 213);
   --border-color: transparent;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
@@ -15,6 +16,3 @@ a{
   text-decoration: none;
 }
 
-p{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}

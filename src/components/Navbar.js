@@ -12,11 +12,11 @@ const Navbar = () =>{
 
   return (
     <nav className="navbar">
+
         <div className='navbar-content'>
+
             <div className="navbar-logo-container">
-                <Link className='navbar-logo' to="/">
-                <p>Ryan Michaud</p>
-                </Link>
+                <Link className='navbar-logo' to="/"> Ryan Michaud  </Link>
             </div>
            
             <div className='navbar-link-container'>
@@ -43,8 +43,9 @@ const Navbar = () =>{
                 </div>
 
             </div>
-
         </div>
+
+        
     </nav>
   );
 }
