@@ -1,0 +1,35 @@
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 12px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-top: solid var(--border-color);
+
+
+}
+
+.footer-nav-links, .footer-social-links{
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-link{
+    color: var(--primary-color);
+    cursor: pointer;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.footer-link:hover{
+    color: var(--text-color);
+    cursor: pointer;
+}
