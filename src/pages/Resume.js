@@ -3,14 +3,14 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 
-const About = ()=>{
+const Resume = ()=>{
 
     return(
         <div>
             <Navbar></Navbar>
 
             <div className="page">
-                about
+                resume
             </div>
             <Footer></Footer>
 
@@ -19,4 +19,4 @@ const About = ()=>{
 }
 
 
-export default About;
+export default Resume;

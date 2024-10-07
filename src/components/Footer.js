@@ -13,6 +13,12 @@ const Footer = ()=>{
                 <Link className="footer-link" to={"/"}>Home</Link> 
                 <div className='footer-spacer'> | </div>
                 <Link className="footer-link" to={"/about"}>About</Link>
+                <div className='footer-spacer'> | </div>
+                <Link className="footer-link" to={"/projects"}>Projects</Link>
+                <div className='footer-spacer'> | </div>
+                <Link className="footer-link" to={"/resume"}>Resume</Link>
+                <div className='footer-spacer'> | </div>
+                <Link className="footer-link" to={"/contact"}>Contact</Link>
             </nav>
             <div className="footer-social-links">
                 <a  className="footer-link" href="https://linkedin.com/in/ryanwmichaud" target="_blank">LinkedIn</a> 
