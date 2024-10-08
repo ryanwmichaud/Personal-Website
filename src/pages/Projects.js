@@ -9,7 +9,8 @@ const Projects = ()=>{
             <Navbar></Navbar>
 
             <div className="page">
-                projects
+                <p className="page-title">Projects</p>
+
 
             </div>
             <Footer></Footer>

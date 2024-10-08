@@ -8,7 +8,7 @@ const PageNotFound = ()=>{
     return(
         <div>
             <Navbar></Navbar>
-            Page Not Found
+            <div className="page">Page Not Found</div>
             <Footer></Footer>
 
         </div>

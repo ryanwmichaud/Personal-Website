@@ -35,9 +35,7 @@ function App() {
         <Route path="/about" element={<About></About>} />
         <Route path="/projects" element={<Projects></Projects>} />
         <Route path="/resume" element={<Resume></Resume>} />
-
         <Route path="/contact" element={<Contact></Contact>} />
-
         <Route path="*" element={<PageNotFound></PageNotFound>} />
       </Routes>
 

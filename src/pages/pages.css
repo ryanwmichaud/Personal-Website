@@ -3,7 +3,8 @@
 
 
 .page{
-    margin-top: 50px;
+    min-height: 80lvh;
+    margin-top: var(--navbar-height);
     background-color: var(--primary-color);
     color: var(--text-color);
     display: flex;
@@ -11,8 +12,8 @@
     align-items: center;
 }
 
-.home-title{
-    font-size: 50px;
+.page-title{
+    font-size: 40px;
 }
 
 
@@ -75,3 +76,23 @@
    
 
  
+
+.resume-container{
+    display: flex;
+    justify-content: center;
+   
+    width: 80vw;
+    height: 110vw;
+    max-width: 900px;
+    max-height: 1150px;
+}
+
+.resume{
+    width: 100%;
+    height: 100%;       
+    border: none;
+    display: flex;
+    max-width: 100%;
+    
+      
+}

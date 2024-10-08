@@ -16,10 +16,8 @@ const Home = ()=>{
             <Navbar></Navbar>
             <div className="page" > 
 
-                <p className="home-title">Ryan Michaud</p>
-
+                <p className="page-title">Ryan Michaud</p>
                 <div className="top">
-                 
 
                     <p> My name is Ryan Michaud and I'm a software developer based in Ann Arbor, MI. Check out some of my projects below</p>
 
@@ -34,9 +32,7 @@ const Home = ()=>{
                  
 
                 
-                
-
-
+        
 
             </div>
             <Footer></Footer>

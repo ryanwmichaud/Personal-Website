@@ -10,7 +10,8 @@ const Contact = ()=>{
             <Navbar></Navbar>
 
             <div className="page">
-                contact
+                <p className="page-title">Contact</p>
+
             </div>
             <Footer></Footer>
 

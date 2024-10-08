@@ -10,7 +10,8 @@ const About = ()=>{
             <Navbar></Navbar>
 
             <div className="page">
-                about
+                <p className="page-title">About</p>
+
             </div>
             <Footer></Footer>
 

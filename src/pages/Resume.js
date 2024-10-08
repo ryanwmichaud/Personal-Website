@@ -10,7 +10,13 @@ const Resume = ()=>{
             <Navbar></Navbar>
 
             <div className="page">
-                resume
+                <p className="page-title">Resume</p>
+                <div className="resume-container">
+
+                    <iframe className="resume" src="/resume.pdf#zoom=FitH"> </iframe>
+
+                </div>
+                
             </div>
             <Footer></Footer>
 
