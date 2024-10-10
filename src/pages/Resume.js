@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 
 const Resume = ()=>{
@@ -13,7 +14,10 @@ const Resume = ()=>{
                 <p className="page-title">Resume</p>
                 <div className="resume-container">
 
-                    <iframe className="resume" src="/resume.pdf#zoom=FitH"> </iframe>
+                <object className="resume" type="application/pdf" data="/resume.pdf#zoom=FitH">
+                    <p>PDF cannot be displayed on this platform</p>
+                    <a href="resume.pdf">Click to Download</a>
+                </object>                   
 
                 </div>
                 

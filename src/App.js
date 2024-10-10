@@ -1,6 +1,7 @@
 import './Global.css';
 import './components/Navbar.css'
 import './components/Footer.css'
+import './components/Project.css'
 import './pages/pages.css'
 
 
