@@ -9,7 +9,7 @@ const Project = ({title, thumbnail, description, technologies, titleLink, thumbn
                 <a className="project-title" href={titleLink}>{title}</a>
                 <div className="project-container">
                     <a href={thumbnailLink}>
-                        <img className="project-thumbnail" src={thumbnail}></img>
+                        <img className="project-thumbnail" src={thumbnail} alt="project-thumbnail"></img>
                     </a>
                     <div className="project-description-container">
                         <p className="project-description">{description}</p>

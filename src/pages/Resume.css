@@ -8,7 +8,9 @@
 
 
 .resume-contact-section{
-    margin-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
 }
 .resume-name{
     text-align: center;
@@ -47,18 +49,19 @@
 
 
 
+
 .skills-heading, .skills-1, .skills-2,
 .resume-name, .resume-contact, .resume-address, .resume-socials,
 .education-heading, .education-title, .education-title-item, .education-name, .education-location, .education-date, .education-description,
 .work-heading, .work-title, .work-position, .work-company, .work-location, .work-date, .work-description,
-.projects-heading, .resume-project-description{
+.projects-heading, .resume-project-title, .resume-project-description, .resume-project-technologies{
     margin: 0;
 }
 
 
 
 
-.education-title, .work-title{
+.education-title, .work-title, .resume-project-title{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -69,13 +72,13 @@
 .education-heading, .work-heading, .skills-heading, .projects-heading{
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 3px;
 }
 .work, .resume-project{
     margin-bottom: 10px;
 }
 
-.education-name, .work-position, .resume-project-title{
+.education-name, .work-position, .resume-project-name{
     color: var(--text-color);
     font-weight: bold;
 }
@@ -88,7 +91,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 5px;
+    
 }
 
 .work-descriptions, .resume-project-descriptions{
@@ -112,6 +115,7 @@
 .resume-project-thumbnail{
     height: 150px;
     width: 150px;
+    margin-top: 10px;
 }
 
 
@@ -123,6 +127,12 @@
 
 
 @media (max-width: 600px) {
+    .education-section, .skills-section, .projects-section{
+        margin-bottom: 7px;
+    }
+    .work-section{
+        margin-bottom: 0;
+    }
     .resume-project-container{
         display: flex;
         flex-direction: column;
@@ -141,3 +151,4 @@
     }
   
 }
+

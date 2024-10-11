@@ -6,7 +6,7 @@
     align-items: center;
     
 
-    font-size: 12px;
+    font-size: 10px;
     text-align: center;
     background-color: var(--secondary-color);
     color: var(--text-color);
@@ -23,9 +23,7 @@
     justify-content: center;
 }
 
-.footer-social-links{
-    margin-bottom: 30px;
-}
+
 
 .footer-link{
     color: var(--text-color);
@@ -41,30 +39,20 @@
 
 .footer-1, .footer-2{
     margin: 0;
-
 }
 .footer-2{
     margin-left: 4px;
 }
 
 .footer-lines{
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin-top: 35px;
+    margin-bottom: 7px;
     display: flex;
     flex-direction: row;
     padding: 0px;
 }
 
-@media (max-width: 600px) {
-    .footer-lines{
-        flex-direction: column;
-        width: 100%;
-    }
-    .footer-1, .footer-2{
-        margin: 0;
-    }
-    .footer{
-      
-    }
-
+.footer-social-links{
+    margin-bottom: 25px;
 }
+

@@ -24,9 +24,9 @@ const Footer = ()=>{
                 <Link className="footer-link" to={"/contact"}>Contact</Link>
             </nav>
             <div className="footer-social-links">
-                <a  className="footer-link" href="https://linkedin.com/in/ryanwmichaud" target="_blank">LinkedIn</a> 
+                <a  className="footer-link" href="https://linkedin.com/in/ryanwmichaud">LinkedIn</a> 
                 <div className='footer-spacer'> | </div>
-                <a  className="footer-link" href="https://github.com/ryanwmichaud" target="_blank">GitHub</a>
+                <a  className="footer-link" href="https://github.com/ryanwmichaud">GitHub</a>
             </div>
         </div>
     )

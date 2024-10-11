@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ResumeProject from "../components/ResumeProject";
 import Work from "../components/Work"
-import { Link } from "react-router-dom";
 
 
 const Resume = ()=>{
@@ -13,7 +12,7 @@ const Resume = ()=>{
             <Navbar></Navbar>
 
             <div className="page">
-                <p className="page-title">Resume</p>
+                
                 
 
                 
@@ -84,7 +83,8 @@ const Resume = ()=>{
             <div className="projects-section">
                 <p className="projects-heading">PROJECTS</p>
                 <ResumeProject title={"Chord Voicing Finder"}
-                                thumbnail={"/projects/ChordFinder/Cmaj9.png"}
+                                technologies={"Node.js, React, Express, MYSQL"}
+                                thumbnail={"/projects/ChordFinder/chord-thumb.png"}
                                 descriptions={[ "Designed an algorithm which finds every possible way that a given group of notes can be played simultaneously on a string instrument. Supports any number of strings in any tuning.",
                                                 "Built a front end which takes user input and generates diagram visualizations of the results.",
                                                 "Implemented secure token based user authentication and integrated a Google sign in option for users to save their preferences and favorite voicings."] 
@@ -93,12 +93,21 @@ const Resume = ()=>{
                                 thumbnailLink={"https://github.com/ryanwmichaud"}>
                 </ResumeProject>
                 <ResumeProject title={"Harmonizer Plugin"}
-                                thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}
-                                descriptions={[ " Built a MIDI plugin for a DAW which allows users to explore constant structure harmony by harmonizing incoming MIDI notes in real time with all possible inversions of a user provided structure.",
+                                technologies={"C++, JUCE Framework"}                                
+                                thumbnail={"/projects/Harmonizer/harmonizer-thumb.png"}
+                                descriptions={[ "Built a MIDI plugin for a DAW which allows users to explore constant structure harmony by harmonizing incoming MIDI notes in real time with all possible inversions of a user provided structure.",
                                                 "Created a console app to run unit tests and ensure future changes do not compromise core functionality."] 
                                                 }
                                 titleLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
                                 thumbnailLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}>
+                </ResumeProject>
+                <ResumeProject title={"Personal Website"}
+                                technologies={"HTML, CSS, JavaScript, React.js"}
+                                thumbnail={"projects/Website/website-thumbnail.png"}
+                                descriptions={[ "Built and designed a custom, responsive website from scratch to share my personal projects."] 
+                                                }
+                                titleLink={"https://github.com/ryanwmichaud/Personal-Website"}
+                                thumbnailLink={"https://github.com/ryanwmichaud/Personal-Website"}>
                 </ResumeProject>
                 
 
