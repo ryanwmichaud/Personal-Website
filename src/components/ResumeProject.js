@@ -8,6 +8,9 @@ const ResumeProject = ({title, thumbnail, descriptions, titleLink, thumbnailLink
         <div className="resume-project">
             <a className="resume-project-title" href={titleLink}>{title}</a>
             <div className="resume-project-container">
+                <a href={thumbnailLink}>
+                    <img className="resume-project-thumbnail" src={thumbnail}></img>
+                </a>
                
                 <div className="resume-project-descriptions">      
                     {descriptions.map( (description, index) =>(
@@ -32,7 +35,5 @@ const ResumeProject = ({title, thumbnail, descriptions, titleLink, thumbnailLink
 export default ResumeProject;
 
 /*
- <a href={thumbnailLink}>
-    <img className="resume-project-thumbnail" src={thumbnail}></img>
-</a>
+
 */

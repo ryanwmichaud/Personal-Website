@@ -38,16 +38,12 @@
 
 
 
-.education-section, .skills-section, .projects-section{
-    margin-bottom: 30px;
+.education-section, .skills-section, .work-section, .projects-section{
+    margin-bottom: 20px;
     width: 80%;
     font-size: 14px;
 }
-.work-section{
-    margin-bottom: 5px;
-    width: 80%;
-    font-size: 14px;
-}
+
 
 
 
@@ -84,9 +80,12 @@
     font-weight: bold;
 }
 
+
+
 .resume-project-container{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .resume-project-thumbnail{
     height: 150px;
@@ -118,5 +117,15 @@
 
 
 @media (max-width: 800px) {
+    .resume-project-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .resume-project-thumbnail{
+        margin: 15px;
+    }
+    .resume-project-descriptions{
+        transform: translateX(-7px);
+    }
   
 }
