@@ -8,7 +8,7 @@ const Projects = ()=>{
     const chordFinderDescription = "Web App that finds every possible way to voice a group of chord tones on a string instrument within a maximum number of frets and generates a diagram visualization. Supports any tuning and number of strings. Custom user authentication and optional Google authentication."
     const harmonizerDescription = "MIDI plugin for a DAW which allows users to explore constant structure harmony. Harmonizes incoming MIDI notes in real time with all possible inversions of a user provided structure."
     return(
-        <div>
+        <div className="background">
             <Navbar></Navbar>
 
             <div className="page">

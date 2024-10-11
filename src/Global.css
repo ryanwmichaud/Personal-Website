@@ -18,4 +18,8 @@ a{
   text-decoration: none;
 }
 
+.background{
+  background-color: var(--primary-color);
+}
+
 

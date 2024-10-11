@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 const Resume = ()=>{
 
     return(
-        <div>
+        <div className="background">
             <Navbar></Navbar>
 
             <div className="page">
@@ -95,7 +95,7 @@ const Resume = ()=>{
                 <ResumeProject title={"Harmonizer Plugin"}
                                 thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}
                                 descriptions={[ " Built a MIDI plugin for a DAW which allows users to explore constant structure harmony by harmonizing incoming MIDI notes in real time with all possible inversions of a user provided structure.",
-                                                "Wrote unit tests to ensure future changes do not compromise the core functionality."] 
+                                                "Created a console app to run unit tests and ensure future changes do not compromise core functionality."] 
                                                 }
                                 titleLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
                                 thumbnailLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}>

@@ -82,15 +82,7 @@
 
 
 
-.resume-project-container{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.resume-project-thumbnail{
-    height: 150px;
-    width: 150px;
-}
+
 
 .bullet-and-work-description, .bullet-and-resume-project-description {
     display: flex;
@@ -110,13 +102,27 @@
     margin: 0px;
 }
 
+
+
+.resume-project-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.resume-project-thumbnail{
+    height: 150px;
+    width: 150px;
+}
+
+
+
 .download-resume{
     text-decoration: underline ;
     color: var(--text-color);
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
     .resume-project-container{
         display: flex;
         flex-direction: column;
@@ -126,6 +132,12 @@
     }
     .resume-project-descriptions{
         transform: translateX(-7px);
+    }
+    .education-section, .skills-section, .work-section, .projects-section{
+        font-size: 12px;
+    }
+    .resume-project{
+        margin-bottom: 20px;
     }
   
 }

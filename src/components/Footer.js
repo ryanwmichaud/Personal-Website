@@ -7,8 +7,11 @@ const Footer = ()=>{
     return(
         <div className='footer'>
 
-            <p> © 2024 Ryan Michaud. All rights reserved.  </p>
-
+            <div className='footer-lines'>
+                <p className='footer-1'> © 2024 Ryan Michaud. </p>
+                <p className='footer-2'> All rights reserved. </p>
+            </div>
+            
             <nav className='footer-nav-links'>
                 <Link className="footer-link" to={"/"}>Home</Link> 
                 <div className='footer-spacer'> | </div>
