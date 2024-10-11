@@ -52,9 +52,9 @@
     }
 }
     
-@media (max-width: 520px) {
+@media (max-width: 400px) {
     .page{
-       padding: 25px;
+       padding: 0;
     }
     .home-page-portrait{
         margin: 0;

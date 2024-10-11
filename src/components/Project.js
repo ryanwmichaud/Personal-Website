@@ -1,14 +1,16 @@
 import React from "react";
 
-const Project = ({title, thumbnail, description, technologies})=>{
+const Project = ({title, thumbnail, description, technologies, titleLink, thumbnailLink})=>{
 
     return(
         <div>
 
             <div className="project">
-                <p className="project-title">{title}</p>
+                <a className="project-title" href={titleLink}>{title}</a>
                 <div className="project-container">
-                    <img className="project-thumbnail" src={thumbnail}></img>
+                    <a href={thumbnailLink}>
+                        <img className="project-thumbnail" src={thumbnail}></img>
+                    </a>
                     <div className="project-description-container">
                         <p className="project-description">{description}</p>
                         <p className="project-technologies">{technologies}</p>

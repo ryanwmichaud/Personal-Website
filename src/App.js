@@ -1,19 +1,22 @@
-import './Global.css';
+import './Global.css'
 import './components/Navbar.css'
 import './components/Footer.css'
 import './components/Project.css'
+import './components/Resume.css'
+
 import './pages/pages.css'
 
 
-import Home from './pages/Home';
+import Home from './pages/Home'
 import About from './pages/About'
-import Projects from './pages/Projects';
-import Resume from './pages/Resume';
-import Contact from './pages/Contact';
-import PageNotFound from './pages/PageNotFound';
+import Projects from './pages/Projects'
+import Resume from './pages/Resume'
+import Contact from './pages/Contact'
+import PageNotFound from './pages/PageNotFound'
 
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
 /*
 export const GlobalContext  = createContext()
 
@@ -41,7 +44,7 @@ function App() {
       </Routes>
 
   </Router>
-  );
+  )
 }
 
-export default App;
+export default App
