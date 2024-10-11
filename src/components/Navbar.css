@@ -64,7 +64,7 @@
     border-style: solid;
     border-width: 2px;
     border-bottom-color: var(--link-hover);
-    transition: border-bottom-color 0.2s ;
+    transition: border-bottom-color  0.2s ;
     cursor: grab;
 }
 

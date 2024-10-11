@@ -17,7 +17,7 @@ const Home = ()=>{
             <div className="page" > 
 
                 <p className="page-title">Ryan Michaud</p>
-                <div className="top">
+                <div className="home-greeting">
 
                     <p> My name is Ryan Michaud and I'm a software developer based in Ann Arbor, MI. Check out some of my projects below</p>
 

@@ -14,11 +14,11 @@ const Work = ({position, location, date, company, descriptions})=>{
                 <p className="work-location" >{location}</p>
             </div>
         <p className="work-date" >{date}</p>
-        <div className="work-description">      
+        <div className="work-descriptions">      
                 {descriptions.map( (description, index) =>(
-                    <div className="bullet-and-work-description">
-                        <p className="work-bullet">•</p>
-                        <p className="work-description" key={index}> {description} </p>
+                    <div className="bullet-and-work-description" key={"bullet-and-work-description"+index}>
+                        <p className="work-bullet" key={"work-bullet"+index}>•</p>
+                        <p className="work-description" key={"work-description"+index}> {description} </p>
                     </div>
                 ))}
         </div>

@@ -1,8 +1,9 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+import ResumeProject from "../components/ResumeProject";
 import Work from "../components/Work"
+import { Link } from "react-router-dom";
 
 
 const Resume = ()=>{
@@ -15,6 +16,25 @@ const Resume = ()=>{
                 <p className="page-title">Resume</p>
                 
 
+                
+            <div className="resume-contact-section">
+
+                <p className="resume-name">Ryan Michaud</p>
+                <p className="resume-contact">(708)-247-9086</p>                
+                <p className="resume-contact">ryanwilliammichaud@gmail.com</p>
+                <p className="resume-address">Ann Arbor, MI 48103</p>
+                <div className="resume-socials">
+                    <a className="resume-github" href="https://github.com/ryanwmichaud" > GitHub </a>
+                    <p className="resume-divider">|</p>
+                    <a className="resume-linkedin" href="https://www.linkedin.com/in/ryanwmichaud/"> LinkedIn </a>
+                </div>
+                
+
+            </div>
+
+
+
+
             <div className="education-section">
                 <p className="education-heading">EDUCATION</p>
                 <div className="education-title">
@@ -24,8 +44,14 @@ const Resume = ()=>{
                 </div>
                 <p className="education-date"> August 2020 - May 2024 </p>
                 <p className="education-description"> Bachelor’s in Computer Science and Musical Studies - 3.96 GPA   </p>
-
             </div>
+
+            <div className="skills-section">
+                <p className="skills-heading">SKILLS</p>
+                <p className="skills-1">Python, Java, C++, JavaScript, SQL, Express, React, Flask</p>
+                <p className="skills-2">                Git, Unix/Linux, AWS (EC2, S3, RDS, CodeBuild), Docker </p>
+            </div>
+
             <div className="work-section">
                 <p className="work-heading">EXPERIENCE</p>
                 <Work position={"Programmer"} 
@@ -49,10 +75,36 @@ const Resume = ()=>{
                     company={"Oberlin College Computer Science"} 
                     location={"Oberlin, Ohio"} 
                     date={"February 2022 - February 2023"} 
-                    descriptions={["Assisted students with debugging Python and Java code. Graded lab and problem set submissions."]}
+                    descriptions={[ "Assisted students with debugging Python and Java code.",
+                                    "Used automated testing suites to grade lab and problem set submissions."
+                    ]}
                 ></Work>
             </div>
 
+            <div className="projects-section">
+                <p className="projects-heading">PROJECTS</p>
+                <ResumeProject title={"Chord Voicing Finder"}
+                                thumbnail={"/projects/ChordFinder/Cmaj9.png"}
+                                descriptions={[ "Designed an algorithm which finds every possible way that a given group of notes can be played simultaneously on a string instrument. Supports any number of strings in any tuning.",
+                                                "Built a front end which takes user input and generates diagram visualizations of the results.",
+                                                "Implemented secure token based user authentication and integrated a Google sign in option for users to save their preferences and favorite voicings."] 
+                                                }
+                                titleLink={"http://3.131.139.197:8000/"}
+                                thumbnailLink={"https://github.com/ryanwmichaud"}>
+                </ResumeProject>
+                <ResumeProject title={"Harmonizer Plugin"}
+                                thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}
+                                descriptions={[ " Built a MIDI plugin for a DAW which allows users to explore constant structure harmony by harmonizing incoming MIDI notes in real time with all possible inversions of a user provided structure.",
+                                                "Wrote unit tests to ensure future changes do not compromise the core functionality."] 
+                                                }
+                                titleLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
+                                thumbnailLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}>
+                </ResumeProject>
+                
+
+            </div>
+
+            <a className="download-resume" href="resume.pdf">View Resume PDF</a>
             
 
 
@@ -61,14 +113,7 @@ const Resume = ()=>{
 
 
 
-                <div className="resume-container">
-
-                <object className="resume" type="application/pdf" data="/resume.pdf#zoom=FitH">
-                    <p>PDF cannot be displayed on this platform</p>
-                    <a href="resume.pdf">Click to Download</a>
-                </object>                   
-
-                </div>
+                
                 
             </div>
             <Footer></Footer>

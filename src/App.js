@@ -2,7 +2,7 @@ import './Global.css'
 import './components/Navbar.css'
 import './components/Footer.css'
 import './components/Project.css'
-import './components/Resume.css'
+import './pages/Resume.css'
 
 import './pages/pages.css'
 

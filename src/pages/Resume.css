@@ -1,0 +1,122 @@
+.resume-divider{
+    margin: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+
+}
+
+
+
+.resume-contact-section{
+    margin-bottom: 30px;
+}
+.resume-name{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.resume-contact, .resume-address{
+    text-align: center;
+    font-size: 13px;
+}
+
+.resume-socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.resume-github, .resume-linkedin{
+    color: var(--text-color);
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.education-section, .skills-section, .projects-section{
+    margin-bottom: 30px;
+    width: 80%;
+    font-size: 14px;
+}
+.work-section{
+    margin-bottom: 5px;
+    width: 80%;
+    font-size: 14px;
+}
+
+
+
+.skills-heading, .skills-1, .skills-2,
+.resume-name, .resume-contact, .resume-address, .resume-socials,
+.education-heading, .education-title, .education-title-item, .education-name, .education-location, .education-date, .education-description,
+.work-heading, .work-title, .work-position, .work-company, .work-location, .work-date, .work-description,
+.projects-heading, .resume-project-description{
+    margin: 0;
+}
+
+
+
+
+.education-title, .work-title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+}
+
+
+.education-heading, .work-heading, .skills-heading, .projects-heading{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.work, .resume-project{
+    margin-bottom: 10px;
+}
+
+.education-name, .work-position, .resume-project-title{
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.resume-project-container{
+    display: flex;
+    flex-direction: row;
+}
+.resume-project-thumbnail{
+    height: 150px;
+    width: 150px;
+}
+
+.bullet-and-work-description, .bullet-and-resume-project-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.work-descriptions, .resume-project-descriptions{
+    margin-left: 7px;
+}
+.work-description, .resume-project-description{
+    margin-left: 7px;
+}
+
+.work-bullet, .resume-project-bullet{
+    margin: 0px;
+}
+
+.download-resume{
+    text-decoration: underline ;
+    color: var(--text-color);
+}
+
+
+@media (max-width: 800px) {
+  
+}
