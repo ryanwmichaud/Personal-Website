@@ -12,6 +12,7 @@ const Home = ()=>{
 
     return(
         <div className="background">
+            
             <Navbar></Navbar>
             <div className="page" > 
 

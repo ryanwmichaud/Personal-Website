@@ -1,7 +1,11 @@
-import React, {useState} from 'react';
+import React, {useState, useContext} from 'react';
 import { Link } from 'react-router-dom';
+import { GlobalContext } from '../App';
+
 
 const Navbar = () =>{
+
+    const {togglePartyMode} = useContext(GlobalContext)
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -40,6 +44,7 @@ const Navbar = () =>{
                     <Link className="mobile-menu-navbar-link" to={"/projects"}>PROJECTS</Link>
                     <Link className="mobile-menu-navbar-link" to={"/resume"}>RESUME</Link>
                     <Link className="mobile-menu-navbar-link" to={"/contact"}>CONTACT</Link>
+                    <button className='party-mode-button' onClick={togglePartyMode}> paRtyMoDE </button>
                 </div>
 
             </div>

@@ -3,7 +3,7 @@ import React from "react";
 const Project = ({title, thumbnail, description, technologies, titleLink, thumbnailLink})=>{
 
     return(
-        <div>
+
 
             <div className="project">
                 <a className="project-title" href={titleLink}>{title}</a>
@@ -20,7 +20,6 @@ const Project = ({title, thumbnail, description, technologies, titleLink, thumbn
 
             </div>
 
-        </div>
     )
 }
 

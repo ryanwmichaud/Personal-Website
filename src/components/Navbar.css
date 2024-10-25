@@ -128,7 +128,7 @@
 
 }
 
-.mobile-menu-navbar-link{
+.mobile-menu-navbar-link, .party-mode-button{
     text-decoration: none;
     color: var(--text-color);
     padding-left: 50px;
@@ -140,10 +140,19 @@
     border-bottom-color: rgb(66, 66, 66);
     border-width: 2px;
     transition: color 0.2s ;
-
-
 }
-.mobile-menu-navbar-link:hover{
+
+.party-mode-button{
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom-color: rgb(66, 66, 66);
+    border-width: 2px;
+
+
+    text-align: left;
+}
+
+.mobile-menu-navbar-link:hover, .party-mode-button:hover{
     color: var(--primary-color)
    
 }

@@ -14,20 +14,23 @@ const Projects = ()=>{
             <div className="page">
                 <p className="page-title">Projects</p>
 
-                <Project title={"Chord Finder"} 
-                thumbnail={"/projects/ChordFinder/Cmaj9.png"}  
-                description={chordFinderDescription} 
-                technologies={"Node.js, React, Express, MYSQL"} 
-                thumbnailLink={"http://3.131.139.197:8000/"}
-                titleLink={"https://github.com/ryanwmichaud"}></Project>
-                
-                <Project title={"Harmonizer Plugin"} 
-                thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}  
-                description={harmonizerDescription} 
-                technologies={"C++, JUCE Framework"} 
-                thumbnailLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
-                titleLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}></Project>
+                <div className="projects-list">
 
+                    <Project title={"Chord Finder"} 
+                    thumbnail={"/projects/ChordFinder/Cmaj9.png"}  
+                    description={chordFinderDescription} 
+                    technologies={"Node.js, React, Express, MYSQL"} 
+                    thumbnailLink={"http://3.131.139.197:8000/"}
+                    titleLink={"https://github.com/ryanwmichaud"}></Project>
+                    
+                    <Project title={"Harmonizer Plugin"} 
+                    thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}  
+                    description={harmonizerDescription} 
+                    technologies={"C++, JUCE Framework"} 
+                    thumbnailLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
+                    titleLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}></Project>
+                    
+                </div>
 
             </div>
             <Footer></Footer>
