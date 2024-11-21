@@ -50,9 +50,9 @@
 
 
 
-.skills-heading, .skills-1, .skills-2,
+.skills-heading, .skills-1, .skills-2, .skills-3,
 .resume-name, .resume-contact, .resume-address, .resume-socials,
-.education-heading, .education-title, .education-title-item, .education-name, .education-location, .education-date, .education-description,
+.education-heading, .education-title, .education-title-item, .education-name, .education-location, .education-date, .education-description, .education-courses,
 .work-heading, .work-title, .work-position, .work-company, .work-location, .work-date, .work-description,
 .projects-heading, .resume-project-title, .resume-project-description, .resume-project-technologies{
     margin: 0;
@@ -78,7 +78,7 @@
     margin-bottom: 10px;
 }
 
-.education-name, .work-position, .resume-project-name{
+.education-name, .work-position, .resume-project-name, .resume-project-technologies{
     color: var(--text-color);
     font-weight: bold;
 }
