@@ -1,0 +1,32 @@
+
+:root{
+  --secondary-color: #6e6cc1;
+  --primary-color: #6e6cc1;
+  --link-hover: #cbba37;
+  --mobile-menu-color: #292929;
+
+  --text-color: rgb(213, 213, 213);
+  --border-color: transparent;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  --navbar-height: 50px;
+
+}
+
+
+* {
+  transition: 
+    background-color 1s linear, 
+    color 0.3s linear; 
+}
+
+
+a{
+  text-decoration: none;
+}
+
+.background{
+  background-color: var(--primary-color);
+}
+
+
