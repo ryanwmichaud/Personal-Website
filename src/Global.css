@@ -1,7 +1,8 @@
 
+/*#6e6cc1;*/
 :root{
-  --secondary-color: #6e6cc1;
-  --primary-color: #6e6cc1;
+  --secondary-color: transparent;
+  --primary-color: transparent;
   --link-hover: #cbba37;
   --mobile-menu-color: #292929;
 

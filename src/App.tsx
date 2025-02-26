@@ -52,8 +52,8 @@ export const GlobalProvider = ({ children }) => {
     } else {
         clearInterval(colorIntervalRef.current);
 
-      document.documentElement.style.setProperty('--primary-color', '#6e6cc1');
-      document.documentElement.style.setProperty('--secondary-color', '#6e6cc1');
+      document.documentElement.style.setProperty('--primary-color', 'transparent');
+      document.documentElement.style.setProperty('--secondary-color', '#transparent');
       document.documentElement.style.setProperty('--link-hover', '#cbba37');
       document.documentElement.style.setProperty('--mobile-menu-color', '#292929');
       document.documentElement.style.setProperty('--text-color', 'rgb(213, 213, 213)'); 
