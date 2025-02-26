@@ -20,7 +20,7 @@ const Resume = ()=>{
 
                 <p className="resume-name">Ryan Michaud</p>
                 <p className="resume-contact">(708)-247-9086</p>                
-                <p className="resume-contact">ryanwmichaud@gmail.com</p>
+                <p className="resume-contact">ryanwilliammichaud@gmail.com</p>
                 <p className="resume-address">Ann Arbor, MI 48103</p>
                 <div className="resume-socials">
                     <a className="resume-github" href="https://github.com/ryanwmichaud" > GitHub </a>
@@ -43,14 +43,12 @@ const Resume = ()=>{
                 </div>
                 <p className="education-date"> August 2020 - May 2024 </p>
                 <p className="education-description"> Bachelor’s in Computer Science and Musical Studies - 3.96 GPA   </p>
-                <p className="education-courses">Courses - Data Structures, Algorithms, Machine Learning, Machine Listening, Digital Signal Processing</p>
             </div>
 
             <div className="skills-section">
                 <p className="skills-heading">SKILLS</p>
-                <p className="skills-1">Python, Java, C++, JavaScript, SQL </p>
-                <p className="skills-2">Express, React, Flask, Selenium, MYSQL, PostgreSQL</p>
-                <p className="skills-3"> Git, Unix/Linux, AWS (EC2, S3, RDS, CodeBuild), Docker </p>
+                <p className="skills-1">Python, Java, C++, JavaScript, SQL, Express, React, Flask</p>
+                <p className="skills-2">                Git, Unix/Linux, AWS (EC2, S3, RDS, CodeBuild), Docker </p>
             </div>
 
             <div className="work-section">
@@ -85,13 +83,11 @@ const Resume = ()=>{
             <div className="projects-section">
                 <p className="projects-heading">PROJECTS</p>
                 <ResumeProject title={"Chord Voicing Finder"}
-                                technologies={"Javascript, Express, React, Webpack, MYSQL, HTML, CSS"}
+                                technologies={"Node.js, React, Express, MYSQL"}
                                 thumbnail={"/projects/ChordFinder/chord-thumb.png"}
-                                descriptions={[ "Developed an algorithm to find all possible ways a group of notes can be played simultaneously on a given string instrument and tuning.",
-                                                "Built a front end which takes user input and generates unique diagram visualizations of the results.",
-                                                "Implemented token-based, custom authentication and integrated a Google sign-in option.",
-                                                "Created an API using REST and JSON-RPC protocols for CRUD operations and server side computations.",
-                                                "Deployed on AWS EC2 and RDS with automated tests to ensure core functionality remains intact. "] 
+                                descriptions={[ "Designed an algorithm which finds every possible way that a given group of notes can be played simultaneously on a string instrument. Supports any number of strings in any tuning.",
+                                                "Built a front end which takes user input and generates diagram visualizations of the results.",
+                                                "Implemented secure token based user authentication and integrated a Google sign in option for users to save their preferences and favorite voicings."] 
                                                 }
                                 titleLink={"http://3.131.139.197:8000/"}
                                 thumbnailLink={"https://github.com/ryanwmichaud"}>
@@ -104,15 +100,6 @@ const Resume = ()=>{
                                                 }
                                 titleLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
                                 thumbnailLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}>
-                </ResumeProject>
-                <ResumeProject title={"Competetive Chore Management System"}
-                                technologies={"Vite, TypeScript React, Python, PostgreSQL"}
-                                thumbnail={"projects/Website/website-thumbnail.png"}
-                                descriptions={[ "Created a full stack application to assign recurring chores, award points, and track chore completion history.",
-                                                "Implemented custom token based authentication to allow users to change the status of their own chores.",
-                                                "Automated browser interactions with Selenium for end to end testing."]}
-                                titleLink={"https://github.com/ryanwmichaud/Personal-Website"}
-                                thumbnailLink={"https://github.com/ryanwmichaud/Personal-Website"}>
                 </ResumeProject>
                 <ResumeProject title={"Personal Website"}
                                 technologies={"HTML, CSS, JavaScript, React.js"}
