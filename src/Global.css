@@ -1,7 +1,7 @@
 
 /*#6e6cc1;*/
 :root{
-  --secondary-color: transparent;
+  --secondary-color: rgb(30, 30, 30);
   --primary-color: transparent;
   --link-hover: #cbba37;
   --mobile-menu-color: #292929;

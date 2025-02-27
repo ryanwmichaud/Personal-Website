@@ -30,8 +30,18 @@
     text-align: center;
 }
 
+.home-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    justify-content: start;
+    text-align: left;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
-
+p.Pressed
 
 
 

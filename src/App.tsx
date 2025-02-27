@@ -53,7 +53,7 @@ export const GlobalProvider = ({ children }) => {
         clearInterval(colorIntervalRef.current);
 
       document.documentElement.style.setProperty('--primary-color', 'transparent');
-      document.documentElement.style.setProperty('--secondary-color', '#transparent');
+      document.documentElement.style.setProperty('--secondary-color', 'rgb(30, 30, 30)');
       document.documentElement.style.setProperty('--link-hover', '#cbba37');
       document.documentElement.style.setProperty('--mobile-menu-color', '#292929');
       document.documentElement.style.setProperty('--text-color', 'rgb(213, 213, 213)'); 
