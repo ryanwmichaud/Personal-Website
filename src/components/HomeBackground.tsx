@@ -19,8 +19,8 @@ const HomeBackground= ()=>{
             let centerY = document.documentElement.scrollHeight
             let circleSpeed = 0.05
 
-            let change: number = 10
-            let autoChange: number = 0
+            let change: number = 0
+            let autoChange: number = 0.1
             let centerYSpeed = .71
 
           
@@ -28,6 +28,7 @@ const HomeBackground= ()=>{
             let opacity: number = 50
 
             p.setup =()=>{
+                p.frameRate(10)
                 const canvas = p.createCanvas(p.windowWidth, document.documentElement.scrollHeight)
                 canvas.style("position", "absolute")
                 canvas.style("top","0")
@@ -37,36 +38,51 @@ const HomeBackground= ()=>{
                 p.noFill()
                 p.stroke(255,0,0, opacity)
 
-                autoDraw()
+            
                 
                 height = p.windowHeight*.5
                 width = p.windowWidth*.5
                 
+                
             }
             let getRandRange = (min: number, max: number)=>{
-                const minCeiled = Math.ceil(min);
-                const maxFloored = Math.floor(max);
-                return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+                
+                return Math.floor(Math.random() * (max - min) + min);
             }
 
             let autoDraw = ()=>{
 
+            
                 
             }
+
             p.draw = ()=>{
+                p.clear()
+                p.background(30)
 
-                let x = centerX  +  p.cos(p.frameCount * circleSpeed) * 300
-                let y = centerY +  p.sin(p.frameCount * circleSpeed) * 300
+                let i = 0
+                let x = centerX  +  p.cos(i * circleSpeed) * 300
+                let y = centerY +  p.sin(i * circleSpeed) * 300
+                while(y>0){
+                    i+=1
+                    y = centerY +  p.sin(i * circleSpeed) * 300
+                    x = centerX  +  p.cos(i * circleSpeed) * 300
 
-                centerY -= centerYSpeed
-             
 
-                width += getRandRange(-1*autoChange, autoChange+1)
-                height+= getRandRange(-1*autoChange, autoChange+1)
+                    centerY -= centerYSpeed
                 
-                p.ellipse(x,y, width, height)
 
+                    width += getRandRange(-1*autoChange, autoChange+1)
+                    height+= getRandRange(-1*autoChange, autoChange+1)
+                    
+                    p.ellipse(x,y, width, height)
+                }
+                y=0
+                y = centerY +  p.sin(i * circleSpeed) * 300
+                x = centerX  +  p.cos(i * circleSpeed) * 300
 
+                centerX = p.windowWidth/2
+                centerY = document.documentElement.scrollHeight
 
 
 
