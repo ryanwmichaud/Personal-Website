@@ -1,8 +1,7 @@
 import React from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import HomeBackground from "../components/HomeBackground"
-
+import Colonies from "../backgrounds/Colonies"
 
 
 const Home = ()=>{
@@ -14,7 +13,7 @@ const Home = ()=>{
     return(
         <div className="background">
             
-            <HomeBackground/>
+            <Colonies/>
             
             <Navbar></Navbar>
             <div className="page" > 

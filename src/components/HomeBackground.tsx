@@ -28,7 +28,7 @@ const HomeBackground= ()=>{
             let opacity: number = 50
 
             p.setup =()=>{
-                p.frameRate(10)
+                p.frameRate(30)
                 const canvas = p.createCanvas(p.windowWidth, document.documentElement.scrollHeight)
                 canvas.style("position", "absolute")
                 canvas.style("top","0")
@@ -45,18 +45,13 @@ const HomeBackground= ()=>{
                 
                 
             }
+
             let getRandRange = (min: number, max: number)=>{
                 
                 return Math.floor(Math.random() * (max - min) + min);
             }
 
-            let autoDraw = ()=>{
-
-            
-                
-            }
-
-            p.draw = ()=>{
+            let update = ()=>{
                 p.clear()
                 p.background(30)
 
@@ -84,6 +79,11 @@ const HomeBackground= ()=>{
                 centerX = p.windowWidth/2
                 centerY = document.documentElement.scrollHeight
 
+            }
+       
+
+            p.draw = ()=>{
+                //update()
 
 
                 if(on){
