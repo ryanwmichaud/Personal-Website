@@ -1,6 +1,14 @@
 import React from "react";
 
-const Work = ({position, location, date, company, descriptions})=>{
+interface WorkProps{
+    position: string
+    location:string 
+    date: string
+    company: string
+    descriptions: string[]
+}
+
+const Work: React.FC<WorkProps> = ({position, location, date, company, descriptions})=>{
 
 
     return(

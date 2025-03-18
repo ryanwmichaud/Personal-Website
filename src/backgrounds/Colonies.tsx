@@ -131,7 +131,7 @@ const Colonies= ()=>{
                 canvas.style("top","0")
                 canvas.style("left", "0")
                 canvas.style("z-index", "-1")
-                p.background(150)
+                p.background(90)
 /*
                 for(let i=0; i<10; i+=1){
                     const x: number = Math.floor(Math.random()*p.windowWidth)
@@ -139,7 +139,7 @@ const Colonies= ()=>{
                     colonies.push(new Colony(x, y))
                 }
 */
-                p.stroke(0, 0, 0, 20)
+                p.stroke(0, 0, 0, 50)
 
 
             }

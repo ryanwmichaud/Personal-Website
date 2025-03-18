@@ -1,6 +1,16 @@
 import React from "react";
 
-const ResumeProject = ({title, technologies, thumbnail, descriptions, titleLink, thumbnailLink})=>{
+interface ResumeProjectProps{
+    title: string
+    technologies: string
+    thumbnail: string
+    descriptions: string[]
+    titleLink: string
+    thumbnailLink: string
+
+}
+
+const ResumeProject: React.FC<ResumeProjectProps> = ({title, technologies, thumbnail, descriptions, titleLink, thumbnailLink})=>{
 
     return(
        

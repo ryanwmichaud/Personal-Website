@@ -1,9 +1,17 @@
 import React from "react";
 
-const Project = ({title, thumbnail, description, technologies, titleLink, thumbnailLink})=>{
+interface ProjectProps{
+    title: string
+    thumbnail: string
+    description: string
+    technologies: string
+    titleLink: string
+    thumbnailLink: string
+}
+
+const Project: React.FC<ProjectProps> = ({title, thumbnail, description, technologies, titleLink, thumbnailLink})=>{
 
     return(
-
 
             <div className="project">
                 <a className="project-title" href={titleLink}>{title}</a>
