@@ -19,7 +19,7 @@ const Projects = ()=>{
                     thumbnail={"/projects/ChordFinder/Cmaj9.png"}  
                     description={chordFinderDescription} 
                     technologies={"Node.js, React, Express, MYSQL"} 
-                    thumbnailLink={"http://3.131.139.197:8000/"}
+                    thumbnailLink={"http://chords.ryanwmichaud.com"}
                     titleLink={"https://github.com/ryanwmichaud"}></Project>
                     
                     <Project title={"Harmonizer Plugin"} 
