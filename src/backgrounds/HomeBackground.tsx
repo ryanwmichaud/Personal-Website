@@ -83,7 +83,7 @@ const HomeBackground= ()=>{
        
 
             p.draw = ()=>{
-                //update()
+                update()
 
 
                 if(on){
