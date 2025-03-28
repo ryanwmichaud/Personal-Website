@@ -124,7 +124,7 @@ const Colonies= ()=>{
             p.setup =()=>{
 
 
-                p.frameRate(30)
+                p.frameRate(20)
                 
                 const canvas = p.createCanvas(p.windowWidth, document.documentElement.scrollHeight)
                 canvas.style("position", "absolute")
@@ -150,7 +150,6 @@ const Colonies= ()=>{
             p.draw = ()=>{
                 
                 const l:number = colonies.length
-                console.log(l);
                 
                 for(let i=0; i<l; i++){
                     const colony = colonies[i]
@@ -167,8 +166,8 @@ const Colonies= ()=>{
        
             p.windowResized=()=>{
                 p.resizeCanvas(p.windowWidth, document.documentElement.scrollHeight)
-                p.background(30)
- 
+                p.background(90)
+                colonies.length = 0
             }
         }
 
