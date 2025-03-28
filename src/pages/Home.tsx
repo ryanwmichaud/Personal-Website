@@ -1,11 +1,12 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Colonies from "../backgrounds/Colonies"
-
+import Project from "../components/Project"
 
 const Home = ()=>{
 
-
+    const chordFinderDescription = "Web App that finds every possible way to voice a group of chord tones on a string instrument within a maximum number of frets and generates a diagram visualization. Supports any tuning and number of strings. Custom user authentication and optional Google authentication."
+    const harmonizerDescription = "MIDI plugin for a DAW which allows users to explore constant structure harmony. Harmonizes incoming MIDI notes in real time with all possible inversions of a user provided structure."
 
 
 
@@ -22,15 +23,25 @@ const Home = ()=>{
                     <p> My name is Ryan Michaud and I'm a software developer based in Ann Arbor, MI. Check out some of my projects below</p>
                 </div>
                 <div className="home-body">
-                    <h3 className="home-subtitle">Thing</h3>
-                    <p className="home-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
-                    <h3 className="home-subtitle">Thing</h3>
-                    <p className="home-description">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-                    <h3 className="home-subtitle">Thing</h3>
-                    <p className="home-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </div>
+                <div className="projects-list">
 
+                    <Project title={"Chord Finder"} 
+                    thumbnail={"/projects/ChordFinder/Cmaj9.png"}  
+                    description={chordFinderDescription} 
+                    technologies={"Node.js, React, Express, MYSQL"} 
+                    thumbnailLink={"http://chords.ryanwmichaud.com"}
+                    titleLink={"https://github.com/ryanwmichaud"}></Project>
+                    
+                    <Project title={"Harmonizer Plugin"} 
+                    thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}  
+                    description={harmonizerDescription} 
+                    technologies={"C++, JUCE Framework"} 
+                    thumbnailLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
+                    titleLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}></Project>
+                    
+                </div>
 
        
             </div>

@@ -1,7 +1,7 @@
 import {useEffect, useRef} from "react"
 import p5 from "p5"
 
-const HomeBackground= ()=>{
+const Circles= ()=>{
     
     //use a ref so that it doesnt get rerendered by react
     // null right now but will be attached to the div later
@@ -116,7 +116,7 @@ const HomeBackground= ()=>{
 
 }
 
-export default HomeBackground 
+export default Circles 
 /*
 
 while(y<document.documentElement.scrollHeight){

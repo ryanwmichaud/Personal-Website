@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Colonies from "../backgrounds/Colonies";
-
+import Circles from "../backgrounds/Circles";
 
 const About = ()=>{
 
     return(
         <div className="background">
-            <Colonies/>
+            <Circles/>
             <Navbar></Navbar>
 
             <div className="page">
