@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
-import Colonies from "../backgrounds/Colonies"
 import Project from "../components/Project"
+import Circles from "../backgrounds/Circles"
 
 const Home = ()=>{
 
@@ -13,7 +13,7 @@ const Home = ()=>{
     return(
         <div className="background">
             
-            <Colonies/>
+            <Circles></Circles>
             
             <Navbar></Navbar>
             <div className="page" > 

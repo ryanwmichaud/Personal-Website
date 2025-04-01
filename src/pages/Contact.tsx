@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Circles from "../backgrounds/Circles"
 import Gauss from "../backgrounds/Gauss"
 
 const Contact = ()=>{

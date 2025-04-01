@@ -11,7 +11,6 @@ const Circles= ()=>{
     useEffect(()=>{
 
         const sketch = (p: p5) => {
-            let on: boolean = false
             let width: number = p.windowWidth*.75
             let height: number = p.windowWidth*.75
             
@@ -19,7 +18,6 @@ const Circles= ()=>{
             let centerY = document.documentElement.scrollHeight
             let circleSpeed = .1
 
-            let change: number = 0
             let autoChange: number = 0.01
             let centerYSpeed = 1
 
