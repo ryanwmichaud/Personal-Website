@@ -17,18 +17,18 @@ const Circles= ()=>{
             
             let centerX = p.windowWidth/2
             let centerY = document.documentElement.scrollHeight
-            let circleSpeed = 0.05
+            let circleSpeed = .1
 
             let change: number = 0
-            let autoChange: number = 0.1
-            let centerYSpeed = .71
+            let autoChange: number = 0.01
+            let centerYSpeed = 1
 
           
 
             let opacity: number = 50
 
             p.setup =()=>{
-                p.frameRate(30)
+                p.frameRate(15)
                 const canvas = p.createCanvas(p.windowWidth, document.documentElement.scrollHeight)
                 canvas.style("position", "absolute")
                 canvas.style("top","0")
@@ -46,10 +46,10 @@ const Circles= ()=>{
                 
             }
 
-            let getRandRange = (min: number, max: number)=>{
-                
-                return Math.floor(Math.random() * (max - min) + min);
-            }
+         
+
+            let tx=0
+            let ty = 1000
 
             let update = ()=>{
                 p.clear()
@@ -58,6 +58,10 @@ const Circles= ()=>{
                 let i = 0
                 let x = centerX  +  p.cos(i * circleSpeed) * 300
                 let y = centerY +  p.sin(i * circleSpeed) * 300
+
+                let nx = p.noise(tx)
+                let ny = p.noise(ty)
+
                 while(y>0){
                     i+=1
                     y = centerY +  p.sin(i * circleSpeed) * 300
@@ -67,34 +71,31 @@ const Circles= ()=>{
                     centerY -= centerYSpeed
                 
 
-                    width += getRandRange(-1*autoChange, autoChange+1)
-                    height+= getRandRange(-1*autoChange, autoChange+1)
+                    width += p.map(nx, 0, 1, -autoChange, autoChange)
+                    height+= p.map(ny, 0,1, -autoChange, autoChange)
                     
                     p.ellipse(x,y, width, height)
                 }
-                y=0
-                y = centerY +  p.sin(i * circleSpeed) * 300
-                x = centerX  +  p.cos(i * circleSpeed) * 300
 
                 centerX = p.windowWidth/2
                 centerY = document.documentElement.scrollHeight
 
+                tx+=0.01
+                ty+=0.01
             }
        
 
             p.draw = ()=>{
                 update()
 
-
-                if(on){
-                    p.ellipse(p.mouseX, p.mouseY, width, height)
-                    width += Math.floor((Math.random() * (change*2+1))-change)
-                    height += Math.floor((Math.random() * (change*2+1))-change)
-                }
-
+//                if(on){
+//                    p.ellipse(p.mouseX, p.mouseY, width, height)
+//                   width += Math.floor((Math.random() * (change*2+1))-change)
+//                    height += Math.floor((Math.random() * (change*2+1))-change)
+//                }
             }
             p.mouseClicked = ()=>{
-                on = !on
+                //on = !on
             }
 
         

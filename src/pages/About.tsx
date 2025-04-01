@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Colonies from "../backgrounds/Colonies";
+import Gauss from "../backgrounds/Gauss";
 import Circles from "../backgrounds/Circles";
 
 const About = ()=>{
