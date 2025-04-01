@@ -2,12 +2,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ResumeProject from "../components/ResumeProject";
 import Work from "../components/Work"
-
+import Colonies from "../backgrounds/Colonies";
 
 const Resume = ()=>{
 
     return(
         <div className="background">
+            <Colonies></Colonies>
             <Navbar></Navbar>
 
             <div className="page">
