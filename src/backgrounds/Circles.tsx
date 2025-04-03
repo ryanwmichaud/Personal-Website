@@ -16,18 +16,18 @@ const Circles= ()=>{
             
             let centerX = p.windowWidth/2
             let centerY = document.documentElement.scrollHeight
-            let trigRate = .1
+            let trigRate = 100
             let trigSize = 300
-            let centerYSpeed = 1
+            let centerYSpeed = 3
 
             let autoChangeX: number = 0.005
             let autoChangeY: number = 0.05
 
 
-            let opacity: number = 50
+            let opacity: number = 100
 
             p.setup =()=>{
-                p.frameRate(15)
+                p.frameRate(10)
                 const canvas = p.createCanvas(p.windowWidth, document.documentElement.scrollHeight)
                 canvas.style("position", "absolute")
                 canvas.style("top","0")
@@ -75,8 +75,8 @@ const Circles= ()=>{
                 centerX = p.windowWidth/2
                 centerY = document.documentElement.scrollHeight
 
-                tx+=0.005
-                ty+=0.005
+                tx+=0.0001
+                ty+=0.0001
             }
        
 
