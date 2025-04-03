@@ -7,13 +7,14 @@ const Home = ()=>{
 
     const chordFinderDescription = "Web App that finds every possible way to voice a group of chord tones on a string instrument within a maximum number of frets and generates a diagram visualization. Supports any tuning and number of strings. Custom user authentication and optional Google authentication."
     const harmonizerDescription = "MIDI plugin for a DAW which allows users to explore constant structure harmony. Harmonizes incoming MIDI notes in real time with all possible inversions of a user provided structure."
+    const birdsQuizDescription = "Web app that allows a user to quiz themselves on a diverse set of bird calls and songs from a chosen set of species."
 
 
 
     return(
         <div className="background">
             
-            <Circles></Circles>
+            <Circles/>
             
             <Navbar></Navbar>
             <div className="page" > 
@@ -31,9 +32,16 @@ const Home = ()=>{
                     thumbnail={"/projects/ChordFinder/Cmaj9.png"}  
                     description={chordFinderDescription} 
                     technologies={"Node.js, React, Express, MYSQL"} 
-                    thumbnailLink={"http://chords.ryanwmichaud.com"}
-                    titleLink={"https://github.com/ryanwmichaud"}></Project>
-                    
+                    thumbnailLink={"https://chords.ryanwmichaud.com"}
+                    titleLink={"https://github.com/ryanwmichaud/TabV4"}></Project>
+                              
+                    <Project title={"Bird Song Quiz"} 
+                    thumbnail={"/projects/Birds/bird-thumbnail.png"}  
+                    description={birdsQuizDescription} 
+                    technologies={"Node.js, React, Vite, FastAPI"} 
+                    thumbnailLink={"https://birds.ryanwmichaud.com"}
+                    titleLink={"https://github.com/ryanwmichaud/Birds"}></Project>
+                     
                     <Project title={"Harmonizer Plugin"} 
                     thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}  
                     description={harmonizerDescription} 
