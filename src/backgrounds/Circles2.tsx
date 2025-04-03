@@ -11,23 +11,26 @@ const Circles= ()=>{
     useEffect(()=>{
 
         const sketch = (p: p5) => {
-            let circleWidth: number = p.windowWidth*.5
-            let circleHeight: number = p.windowWidth*.5
+            let circleWidth: number = p.windowWidth*.75
+            let circleHeight: number = p.windowWidth*.75
+
+            let xRange= 500
+            let yRange = 1100
             
             let centerX = p.windowWidth/2
             let centerY = document.documentElement.scrollHeight
-            let trigRate = .1
-            let trigSize = 300
+            let circleSpeed = .1
+
             let centerYSpeed = 1
 
-            let autoChangeX: number = 0.005
-            let autoChangeY: number = 0.05
-
+          
 
             let opacity: number = 50
+            let prevMouseX = p.mouseX;
+            let prevMouseY = p.mouseY;
 
             p.setup =()=>{
-                p.frameRate(15)
+                p.frameRate(40)
                 const canvas = p.createCanvas(p.windowWidth, document.documentElement.scrollHeight)
                 canvas.style("position", "absolute")
                 canvas.style("top","0")
@@ -36,6 +39,9 @@ const Circles= ()=>{
                 p.background(30)
                 p.noFill()
                 p.stroke(255,0,0, opacity)
+
+
+                
                 
             }
 
@@ -44,47 +50,54 @@ const Circles= ()=>{
             let tx=0
             let ty = 1000
 
-            let update = ()=>{
+            let update = (mx: number , my: number )=>{
                 p.clear()
                 p.background(30)
 
                 let i = 0
-                let x = centerX  +  p.cos(i * trigRate) * trigSize
-                let y = centerY +  p.sin(i * trigRate) * trigSize
+                let x = centerX  +  p.cos(i * circleSpeed) * 300
+                let y = centerY +  p.sin(i * circleSpeed) * 300
+            
 
-                let nx = p.noise(tx)
-                let ny = p.noise(ty)
 
                 while(y>0){
-
-
-                    p.ellipse(x,y, circleWidth, circleHeight)
-
+                    p.ellipse(x,y, circleWidth+mx, circleHeight+my)
                     i+=1
-                    y = centerY +  p.sin(i * trigRate) * trigSize
-                    x = centerX  +  p.cos(i * trigRate) * trigSize
+                    y = centerY +  p.sin(i * circleSpeed) * 300
+                    x = centerX  +  p.cos(i * circleSpeed) * 300
 
                     centerY -= centerYSpeed
-                
-
-                    circleWidth += p.map(nx, 0, 1, -autoChangeX, autoChangeX)
-                    circleHeight+= p.map(ny, 0,1, -autoChangeY, autoChangeY)
                     
+
                 }
 
                 centerX = p.windowWidth/2
                 centerY = document.documentElement.scrollHeight
 
-                tx+=0.005
-                ty+=0.005
+                tx+=0.01
+                ty+=0.01
             }
        
 
             p.draw = ()=>{
-                update()
+
+                if (p.mouseX !== prevMouseX || p.mouseY !== prevMouseY) {
+                    const mx = p.map(p.mouseX, 0, p.windowWidth, -1*xRange, xRange)
+                    const my = p.map(p.mouseY, 0, document.documentElement.scrollHeight, -1*yRange, yRange)
+                    console.log(mx,my)
+                    update(mx, my)
+                    prevMouseX = p.mouseX
+                    prevMouseY = p.mouseY
+                  }
+                  else{
+                    console.log("same");
+                    
+                  }
+
+
 
             }
-          
+        
        
             p.windowResized=()=>{
                 p.resizeCanvas(p.windowWidth, document.documentElement.scrollHeight)
