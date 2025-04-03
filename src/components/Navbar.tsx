@@ -24,7 +24,7 @@ const Navbar = () =>{
             <div className='navbar-link-container'>
                 <Link className="navbar-link" to={"/"}>HOME</Link>
                 <Link className="navbar-link" to={"/about"}>ABOUT</Link>
-                <Link className="navbar-link" to={"/projects"}>PROJECTS</Link>
+                <Link className="navbar-link" to={"/resume"}>RESUME</Link>
                 <button className="navbar-link" onClick={toggleMobileMenuOpen}>MORE</button>
 
             </div>
@@ -39,7 +39,6 @@ const Navbar = () =>{
                 <div className='mobile-menu-navbar-link-container'>
                     <Link className="mobile-menu-navbar-link" to={"/"}>HOME</Link>
                     <Link className="mobile-menu-navbar-link" to={"/about"}>ABOUT</Link>
-                    <Link className="mobile-menu-navbar-link" to={"/projects"}>PROJECTS</Link>
                     <Link className="mobile-menu-navbar-link" to={"/resume"}>RESUME</Link>
                     <Link className="mobile-menu-navbar-link" to={"/contact"}>CONTACT</Link>
                     <button className='party-mode-button'> paRtyMoDE </button>
