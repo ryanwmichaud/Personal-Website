@@ -21,7 +21,7 @@ const Circles= ()=>{
             let centerY = document.documentElement.scrollHeight
             let circleSpeed = .1
 
-            let centerYSpeed = 4
+            //let centerYSpeed = 4
 
           
 
@@ -105,6 +105,7 @@ const Circles= ()=>{
             p.windowResized=()=>{
                 p.resizeCanvas(p.windowWidth, document.documentElement.scrollHeight)
                 p.background(30)
+                update(prevMouseX,prevMouseY)
  
             }
         }
