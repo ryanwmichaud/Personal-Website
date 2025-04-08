@@ -145,13 +145,20 @@ const Colonies= ()=>{
             }
 
             p.mouseClicked = ()=>{
+                if(colonies.length >= 5){
+                    colonies.splice(0, 1)
+                }
                 colonies.push(new Colony(p.mouseX, p.mouseY))
+ 
             }
             p.draw = ()=>{
                 
                 const l:number = colonies.length
+            
+                console.log(colonies.map(w=>{w.x,w.y}))
                 
                 for(let i=0; i<l; i++){
+                    console.log(colonies[i].x, colonies[i].y)
                     const colony = colonies[i]
                     if(colony.c<1000){
                         colony.update()

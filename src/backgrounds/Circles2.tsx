@@ -11,17 +11,17 @@ const Circles= ()=>{
     useEffect(()=>{
 
         const sketch = (p: p5) => {
-            let circleWidth: number = p.windowWidth*.75
-            let circleHeight: number = p.windowWidth*.75
+            let circleWidth: number = p.windowWidth*.5
+            let circleHeight: number = p.windowWidth*.5
 
             let xRange= 500
-            let yRange = 1100
+            let yRange = 2200
             
             let centerX = p.windowWidth/2
             let centerY = document.documentElement.scrollHeight
             let circleSpeed = .1
 
-            let centerYSpeed = 1
+            let centerYSpeed = 4
 
           
 
@@ -54,19 +54,25 @@ const Circles= ()=>{
                 p.clear()
                 p.background(30)
 
+                p.map(p.mouseY, 0, document.documentElement.scrollHeight, -1*yRange, yRange)
+                p.map(p.mouseX, 0, p.windowWidth, 1, 10)
+                    
                 let i = 0
                 let x = centerX  +  p.cos(i * circleSpeed) * 300
                 let y = centerY +  p.sin(i * circleSpeed) * 300
             
-
+                
 
                 while(y>0){
-                    p.ellipse(x,y, circleWidth+mx, circleHeight+my)
+                    
+                    const w = p.map(mx, 0, p.windowWidth, -1*xRange, xRange)
+                    const h = p.map(my, 0, document.documentElement.scrollHeight, -1*yRange, yRange)
+                    p.ellipse(x,y, circleWidth+w, circleHeight+h)
                     i+=1
-                    y = centerY +  p.sin(i * circleSpeed) * 300
-                    x = centerX  +  p.cos(i * circleSpeed) * 300
+                    y = centerY +  p.sin(i * circleSpeed) * (w+300)
+                    x = centerX  +  p.cos(i * circleSpeed) * (w+300)
 
-                    centerY -= centerYSpeed
+                    centerY -= 4 
                     
 
                 }
@@ -82,10 +88,7 @@ const Circles= ()=>{
             p.draw = ()=>{
 
                 if (p.mouseX !== prevMouseX || p.mouseY !== prevMouseY) {
-                    const mx = p.map(p.mouseX, 0, p.windowWidth, -1*xRange, xRange)
-                    const my = p.map(p.mouseY, 0, document.documentElement.scrollHeight, -1*yRange, yRange)
-                    console.log(mx,my)
-                    update(mx, my)
+                    update(p.mouseX, p.mouseY)
                     prevMouseX = p.mouseX
                     prevMouseY = p.mouseY
                   }
