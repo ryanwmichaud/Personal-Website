@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import Project from "../components/Project"
-import Circles from "../backgrounds/Circles"
+import Circles2 from "../backgrounds/Circles2"
 
 const Home = ()=>{
 
@@ -13,11 +13,11 @@ const Home = ()=>{
 
     return(
         <div className="background">
-            
-            <Circles/>
-            
+
+            <Circles2/>
+
             <Navbar></Navbar>
-            <div className="page" > 
+            <div className="page" >
 
                 <p className="page-title">Ryan Michaud</p>
                 <div className="home-greeting">
@@ -28,34 +28,34 @@ const Home = ()=>{
                 </div>
                 <div className="projects-list">
 
-                    <Project title={"Chord Finder"} 
-                    thumbnail={"/projects/ChordFinder/Cmaj9.png"}  
-                    description={chordFinderDescription} 
-                    technologies={"Node.js, React, Express, MYSQL"} 
+                    <Project title={"Chord Finder"}
+                    thumbnail={"/projects/ChordFinder/Cmaj9.png"}
+                    description={chordFinderDescription}
+                    technologies={"Node.js, React, Express, MYSQL"}
                     thumbnailLink={"https://chords.ryanwmichaud.com"}
                     titleLink={"https://github.com/ryanwmichaud/TabV4"}></Project>
-                              
-                    <Project title={"Bird Song Quiz"} 
-                    thumbnail={"/projects/Birds/bird-thumbnail.png"}  
-                    description={birdsQuizDescription} 
-                    technologies={"Node.js, React, Vite, FastAPI"} 
+
+                    <Project title={"Bird Song Quiz"}
+                    thumbnail={"/projects/Birds/bird-thumbnail.png"}
+                    description={birdsQuizDescription}
+                    technologies={"Node.js, React, Vite, FastAPI"}
                     thumbnailLink={"https://birds.ryanwmichaud.com"}
                     titleLink={"https://github.com/ryanwmichaud/Birds"}></Project>
-                     
-                    <Project title={"Harmonizer Plugin"} 
-                    thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}  
-                    description={harmonizerDescription} 
-                    technologies={"C++, JUCE Framework"} 
+
+                    <Project title={"Harmonizer Plugin"}
+                    thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}
+                    description={harmonizerDescription}
+                    technologies={"C++, JUCE Framework"}
                     thumbnailLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
                     titleLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}></Project>
-                    
+
                 </div>
 
-       
+
             </div>
 
-                
-         
+
+
             <Footer></Footer>
 
         </div>
@@ -63,4 +63,4 @@ const Home = ()=>{
 }
 
 
-export default Home;
+export default Home

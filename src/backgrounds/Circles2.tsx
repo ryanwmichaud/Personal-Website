@@ -2,7 +2,7 @@ import {useEffect, useRef} from "react"
 import p5 from "p5"
 
 const Circles= ()=>{
-    
+
     //use a ref so that it doesnt get rerendered by react
     // null right now but will be attached to the div later
     const canvasRef = useRef<HTMLDivElement>(null)
@@ -11,19 +11,19 @@ const Circles= ()=>{
     useEffect(()=>{
 
         const sketch = (p: p5) => {
-            let circleWidth: number = p.windowWidth*.75
-            let circleHeight: number = p.windowWidth*.75
+            let circleWidth: number = p.windowWidth*.5
+            let circleHeight: number = p.windowWidth*.5
 
             let xRange= 500
-            let yRange = 1100
-            
+            let yRange = 2200
+
             let centerX = p.windowWidth/2
             let centerY = document.documentElement.scrollHeight
             let circleSpeed = .1
 
-            let centerYSpeed = 1
+            //let centerYSpeed = 4
 
-          
+
 
             let opacity: number = 50
             let prevMouseX = p.mouseX;
@@ -45,7 +45,7 @@ const Circles= ()=>{
                 
             }
 
-         
+
 
             let tx=0
             let ty = 1000
@@ -54,20 +54,26 @@ const Circles= ()=>{
                 p.clear()
                 p.background(30)
 
+                p.map(p.mouseY, 0, document.documentElement.scrollHeight, -1*yRange, yRange)
+                p.map(p.mouseX, 0, p.windowWidth, 1, 10)
+
                 let i = 0
                 let x = centerX  +  p.cos(i * circleSpeed) * 300
                 let y = centerY +  p.sin(i * circleSpeed) * 300
-            
+
 
 
                 while(y>0){
-                    p.ellipse(x,y, circleWidth+mx, circleHeight+my)
-                    i+=1
-                    y = centerY +  p.sin(i * circleSpeed) * 300
-                    x = centerX  +  p.cos(i * circleSpeed) * 300
 
-                    centerY -= centerYSpeed
-                    
+                    const w = p.map(mx, 0, p.windowWidth, -1*xRange, xRange)
+                    const h = p.map(my, 0, document.documentElement.scrollHeight, -1*yRange, yRange)
+                    p.ellipse(x,y, circleWidth+w, circleHeight+h)
+                    i+=1
+                    y = centerY +  p.sin(i * circleSpeed) * (w+300)
+                    x = centerX  +  p.cos(i * circleSpeed) * (w+300)
+
+                    centerY -= 4
+
 
                 }
 
@@ -77,57 +83,55 @@ const Circles= ()=>{
                 tx+=0.01
                 ty+=0.01
             }
-       
+
 
             p.draw = ()=>{
 
-                if (p.mouseX !== prevMouseX || p.mouseY !== prevMouseY) {
-                    const mx = p.map(p.mouseX, 0, p.windowWidth, -1*xRange, xRange)
-                    const my = p.map(p.mouseY, 0, document.documentElement.scrollHeight, -1*yRange, yRange)
-                    console.log(mx,my)
-                    update(mx, my)
-                    prevMouseX = p.mouseX
-                    prevMouseY = p.mouseY
-                  }
-                  else{
-                    console.log("same");
-                    
-                  }
+    if (p.mouseX !== prevMouseX || p.mouseY !== prevMouseY) {
+        update(p.mouseX, p.mouseY)
+        prevMouseX = p.mouseX
+        prevMouseY = p.mouseY
+      }
+      else{
+        console.log("same");
+
+      }
 
 
-
-            }
-        
-       
-            p.windowResized=()=>{
-                p.resizeCanvas(p.windowWidth, document.documentElement.scrollHeight)
-                p.background(30)
- 
-            }
-        }
-
-        //create p5 instance with our defd sketch logic and node to attach to
-        const myP5 = new p5(sketch, canvasRef.current!)
-        //cleanup p5 instance when the componentunmounts
-        return ()=>{myP5.remove()}
-    }, [])
-
-    return <div ref={canvasRef}></div>
 
 }
 
-export default Circles 
+
+p.windowResized=()=>{
+    p.resizeCanvas(p.windowWidth, document.documentElement.scrollHeight)
+    p.background(30)
+    update(prevMouseX,prevMouseY)
+
+}
+}
+
+//create p5 instance with our defd sketch logic and node to attach to
+const myP5 = new p5(sketch, canvasRef.current!)
+//cleanup p5 instance when the componentunmounts
+return ()=>{myP5.remove()}
+}, [])
+
+return <div ref={canvasRef}></div>
+
+}
+
+export default Circles
 /*
 
 while(y<document.documentElement.scrollHeight){
-                    p.ellipse(x, y, width, height)
-                    width += getRandRange(-1*autoChange,autoChange+1)
-                    height += getRandRange(-1*autoChange,autoChange+1)
-                    y += yVelocity
-                    x += getRandRange(-1*xVelocity,xVelocity+1)
+        p.ellipse(x, y, width, height)
+        width += getRandRange(-1*autoChange,autoChange+1)
+        height += getRandRange(-1*autoChange,autoChange+1)
+        y += yVelocity
+        x += getRandRange(-1*xVelocity,xVelocity+1)
 
-                }
-                y = 0
-                
-                
-                */
+    }
+    y = 0
+    
+    
+    */

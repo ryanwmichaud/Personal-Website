@@ -2,7 +2,7 @@ import {useEffect, useRef} from "react"
 import p5 from "p5"
 
 const Colonies= ()=>{
-    
+
     //use a ref so that it doesnt get rerendered by react
     // null right now but will be attached to the div later
     const canvasRef = useRef<HTMLDivElement>(null)
@@ -14,7 +14,7 @@ const Colonies= ()=>{
             const speed: number = 1
             const colonies: Colony[] = []
 
-            
+
             class Walker{
                 x: number
                 y: number
@@ -89,7 +89,7 @@ const Colonies= ()=>{
                 update(){
 
                     this.c += 1
-                    
+
                     //kill
                     for(let i=0; i<this.walkers.length; i++){
                         if(this.walkers[i].c > 100 ||
@@ -121,63 +121,70 @@ const Colonies= ()=>{
             }
 
 
-            p.setup =()=>{
+p.setup =()=>{
 
 
-                p.frameRate(20)
-                
-                const canvas = p.createCanvas(p.windowWidth, document.documentElement.scrollHeight)
-                canvas.style("position", "absolute")
-                canvas.style("top","0")
-                canvas.style("left", "0")
-                canvas.style("z-index", "-1")
-                p.background(90)
+    p.frameRate(20)
+
+    const canvas = p.createCanvas(p.windowWidth, document.documentElement.scrollHeight)
+    canvas.style("position", "absolute")
+    canvas.style("top","0")
+    canvas.style("left", "0")
+    canvas.style("z-index", "-1")
+    p.background(90)
 /*
-                for(let i=0; i<10; i+=1){
-                    const x: number = Math.floor(Math.random()*p.windowWidth)
-                    const y: number = Math.floor(Math.random()*document.documentElement.scrollHeight)
-                    colonies.push(new Colony(x, y))
-                }
+    for(let i=0; i<10; i+=1){
+        const x: number = Math.floor(Math.random()*p.windowWidth)
+        const y: number = Math.floor(Math.random()*document.documentElement.scrollHeight)
+        colonies.push(new Colony(x, y))
+    }
 */
-                p.stroke(0, 0, 0, 50)
+    p.stroke(0, 0, 0, 50)
 
 
-            }
+}
 
-            p.mouseClicked = ()=>{
-                colonies.push(new Colony(p.mouseX, p.mouseY))
-            }
-            p.draw = ()=>{
-                
-                const l:number = colonies.length
-                
-                for(let i=0; i<l; i++){
-                    const colony = colonies[i]
-                    if(colony.c<1000){
-                        colony.update()
-                    }
-                }
-            }
+p.mouseClicked = ()=>{
+    if(colonies.length >= 5){
+        colonies.splice(0, 1)
+    }
+    colonies.push(new Colony(p.mouseX, p.mouseY))
 
+}
+p.draw = ()=>{
 
+    const l:number = colonies.length
 
+    console.log(colonies.map(w=>{w.x,w.y}))
 
-        
-       
-            p.windowResized=()=>{
-                p.resizeCanvas(p.windowWidth, document.documentElement.scrollHeight)
-                p.background(90)
-                colonies.length = 0
-            }
+    for(let i=0; i<l; i++){
+        console.log(colonies[i].x, colonies[i].y)
+        const colony = colonies[i]
+        if(colony.c<1000){
+            colony.update()
         }
+    }
+}
 
-        //create p5 instance with our defd sketch logic and node to attach to
-        const myP5 = new p5(sketch, canvasRef.current!)
-        //cleanup p5 instance when the componentunmounts
-        return ()=>{myP5.remove()}
-    }, [])
 
-    return <div ref={canvasRef}></div>
+
+
+
+
+p.windowResized=()=>{
+    p.resizeCanvas(p.windowWidth, document.documentElement.scrollHeight)
+    p.background(90)
+    colonies.length = 0
+}
+}
+
+//create p5 instance with our defd sketch logic and node to attach to
+const myP5 = new p5(sketch, canvasRef.current!)
+//cleanup p5 instance when the componentunmounts
+return ()=>{myP5.remove()}
+}, [])
+
+return <div ref={canvasRef}></div>
 
 }
 
