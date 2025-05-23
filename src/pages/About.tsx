@@ -1,12 +1,12 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Gauss from "../backgrounds/Gauss";
+import Circles2 from "../backgrounds/Circles2";
 
 const About = ()=>{
 
     return(
         <div className="background">
-            <Gauss/>
+            <Circles2/>
             <Navbar></Navbar>
 
             <div className="page">

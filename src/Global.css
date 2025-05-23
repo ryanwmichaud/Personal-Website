@@ -24,6 +24,10 @@
 
 a{
   text-decoration: none;
+  color: var(--text-color);
+}
+a:visited{
+  color: var(--text-color);
 }
 
 .background{

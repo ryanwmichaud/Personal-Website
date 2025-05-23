@@ -2,13 +2,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import ResumeProject from "../components/ResumeProject";
 import Work from "../components/Work"
-import Colonies from "../backgrounds/Colonies";
+import Circles2 from "../backgrounds/Circles2";
 
 const Resume = ()=>{
 
     return(
         <div className="background">
-            <Colonies></Colonies>
+            <Circles2></Circles2>
             <Navbar></Navbar>
 
             <div className="page">
@@ -85,9 +85,10 @@ const Resume = ()=>{
                 <ResumeProject title={"Chord Voicing Finder"}
                                 technologies={"Node.js, React, Express, MYSQL"}
                                 thumbnail={"/projects/ChordFinder/chord-thumb.png"}
-                                descriptions={[ "Designed an algorithm which finds every possible way that a given group of notes can be played simultaneously on a string instrument. Supports any number of strings in any tuning.",
-                                                "Built a front end which takes user input and generates diagram visualizations of the results.",
-                                                "Implemented secure token based user authentication and integrated a Google sign in option for users to save their preferences and favorite voicings."] 
+                                descriptions={[ "Developed an algorithm to find all possible ways a group of notes can be played simultaneously on a given string instrument and tuning.",
+                                                "Built a front end which takes user input and generates unique diagram visualizations of the results. ",
+                                                "Implemented token-based, custom authentication and integrated a Google sign-in option.",
+                                                "Created an API using REST and JSON-RPC protocols for CRUD operations and server side computations."] 
                                                 }
                                 titleLink={"http://3.131.139.197:8000/"}
                                 thumbnailLink={"https://github.com/ryanwmichaud"}>
@@ -95,20 +96,13 @@ const Resume = ()=>{
                 <ResumeProject title={"Harmonizer Plugin"}
                                 technologies={"C++, JUCE Framework"}                                
                                 thumbnail={"/projects/Harmonizer/harmonizer-thumb.png"}
-                                descriptions={[ "Built a MIDI plugin for a DAW which allows users to explore constant structure harmony by harmonizing incoming MIDI notes in real time with all possible inversions of a user provided structure.",
+                                descriptions={[ "Developed a MIDI plugin for a DAW which allows users to explore constant structure harmony by harmonizing incoming MIDI notes in real time with all possible inversions of a user provided chord.",
                                                 "Created a console app to run unit tests and ensure future changes do not compromise core functionality."] 
                                                 }
                                 titleLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
                                 thumbnailLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}>
                 </ResumeProject>
-                <ResumeProject title={"Personal Website"}
-                                technologies={"HTML, CSS, JavaScript, React.js"}
-                                thumbnail={"projects/Website/website-thumbnail.png"}
-                                descriptions={[ "Built and designed a custom, responsive website from scratch to share my personal projects."] 
-                                                }
-                                titleLink={"https://github.com/ryanwmichaud/Personal-Website"}
-                                thumbnailLink={"https://github.com/ryanwmichaud/Personal-Website"}>
-                </ResumeProject>
+
                 
 
             </div>
@@ -133,3 +127,14 @@ const Resume = ()=>{
 
 
 export default Resume;
+
+/*
+                <ResumeProject title={"Personal Website"}
+                                technologies={"HTML, CSS, JavaScript, React.js"}
+                                thumbnail={"projects/Website/website-thumbnail.png"}
+                                descriptions={[ "Built and designed a custom, responsive website from scratch to share my personal projects."] 
+                                                }
+                                titleLink={"https://github.com/ryanwmichaud/Personal-Website"}
+                                thumbnailLink={"https://github.com/ryanwmichaud/Personal-Website"}>
+                </ResumeProject>
+*/

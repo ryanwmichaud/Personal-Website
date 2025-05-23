@@ -1,7 +1,7 @@
 import {useEffect, useRef} from "react"
 import p5 from "p5"
 
-const Circles= ()=>{
+const Circles2= ()=>{
 
     //use a ref so that it doesnt get rerendered by react
     // null right now but will be attached to the div later
@@ -14,14 +14,12 @@ const Circles= ()=>{
             let circleWidth: number = p.windowWidth*.5
             let circleHeight: number = p.windowWidth*.5
 
-            let xRange= 500
-            let yRange = 2200
 
             let centerX = p.windowWidth/2
             let centerY = document.documentElement.scrollHeight
             let circleSpeed = .1
 
-            //let centerYSpeed = 4
+            let centerYSpeed = 4
 
 
 
@@ -40,22 +38,14 @@ const Circles= ()=>{
                 p.noFill()
                 p.stroke(255,0,0, opacity)
 
-
-                
-                
             }
 
-
-
-            let tx=0
-            let ty = 1000
 
             let update = (mx: number , my: number )=>{
                 p.clear()
                 p.background(30)
 
-                p.map(p.mouseY, 0, document.documentElement.scrollHeight, -1*yRange, yRange)
-                p.map(p.mouseX, 0, p.windowWidth, 1, 10)
+            
 
                 let i = 0
                 let x = centerX  +  p.cos(i * circleSpeed) * 300
@@ -65,23 +55,21 @@ const Circles= ()=>{
 
                 while(y>0){
 
-                    const w = p.map(mx, 0, p.windowWidth, -1*xRange, xRange)
-                    const h = p.map(my, 0, document.documentElement.scrollHeight, -1*yRange, yRange)
+                    const w = p.map(mx, 0, p.windowWidth, -200, 300)
+                    const multiplier = 300 + p.map(mx, 0, p.windowWidth, -300, 50)
+                    const h = p.map(my, 0, document.documentElement.scrollHeight, -2000, 2000)
                     p.ellipse(x,y, circleWidth+w, circleHeight+h)
                     i+=1
-                    y = centerY +  p.sin(i * circleSpeed) * (w+300)
-                    x = centerX  +  p.cos(i * circleSpeed) * (w+300)
+                    y = centerY +  p.sin(i * circleSpeed) * (multiplier)
+                    x = centerX  +  p.cos(i * circleSpeed) * (multiplier)
 
-                    centerY -= 4
-
+                    centerY -= centerYSpeed
 
                 }
 
                 centerX = p.windowWidth/2
                 centerY = document.documentElement.scrollHeight
 
-                tx+=0.01
-                ty+=0.01
             }
 
 
@@ -120,7 +108,7 @@ return <div ref={canvasRef}></div>
 
 }
 
-export default Circles
+export default Circles2
 /*
 
 while(y<document.documentElement.scrollHeight){
