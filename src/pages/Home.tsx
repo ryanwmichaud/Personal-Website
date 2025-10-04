@@ -57,12 +57,7 @@ const Home = ()=>{
                     thumbnailLink={"https://typing.ryanwmichaud.com"}
                     titleLink={"https://github.com/ryanwmichaud/Typing"}></Project>
 
-                    <Project title={"Bird Song Quiz"}
-                    thumbnail={"/projects/Birds/bird-thumbnail.png"}
-                    description={birdsQuizDescription}
-                    technologies={"Node.js, React, Vite, FastAPI"}
-                    thumbnailLink={"https://birds.ryanwmichaud.com"}
-                    titleLink={"https://github.com/ryanwmichaud/Birds"}></Project>
+                    
 
                     <Project title={"Harmonizer Plugin"}
                     thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}
@@ -86,3 +81,5 @@ const Home = ()=>{
 
 
 export default Home
+
+

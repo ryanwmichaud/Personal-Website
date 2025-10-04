@@ -21,7 +21,7 @@ jobs:
         #prevent nested file structure. 
       - name: rename build before copying to EC2
         run: |
-          mv dist typing-build
+          mv dist portfolio-build
       
       - name: Copy files to EC2
         uses: appleboy/scp-action@v0.1.7
