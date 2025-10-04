@@ -5,7 +5,7 @@ import Project from "../components/Project"
 const Projects = ()=>{
 
     const chordFinderDescription = "Web App that finds every possible way to voice a group of chord tones on a string instrument within a maximum number of frets and generates a diagram visualization. Supports any tuning and number of strings. Custom user authentication and optional Google authentication."
-    const birdsQuizDescription = "Web app that allows a user to quiz themselves on a diverse set of bird calls and songs from a chosen set of species."
+    //const birdsQuizDescription = "Web app that allows a user to quiz themselves on a diverse set of bird calls and songs from a chosen set of species."
     const harmonizerDescription = "MIDI plugin for a DAW which allows users to explore constant structure harmony. Harmonizes incoming MIDI notes in real time with all possible inversions of a user provided structure."
     return(
         <div className="background">

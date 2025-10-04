@@ -4,7 +4,8 @@
                     technologies={"Node.js, React, Vite, FastAPI"}
                     thumbnailLink={"https://birds.ryanwmichaud.com"}
                     titleLink={"https://github.com/ryanwmichaud/Birds"}></Project>
-const birdsQuizDescription = 
+                    
+/*const birdsQuizDescription = 
     `Learn to identify not just the common calls but the voices of 
     your favorite common bird species. Quiz yourself on a diverse 
     set of bird calls and songs from a chosen set of species.`

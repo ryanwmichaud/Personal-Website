@@ -19,7 +19,13 @@ const Home = ()=>{
     `Explore constant structure harmony one note at a time. 
     This MIDI plugin harmonizes incoming MIDI notes in real 
     time with all possible inversions of a user provided structure.`
-    
+   /* 
+   const birdsQuizDescription = 
+    `Learn to identify not just the common calls but the voices of 
+    your favorite common bird species. Quiz yourself on a diverse 
+    set of bird calls and songs from a chosen set of species.`
+    */
+
 
 
     return(
@@ -53,7 +59,6 @@ const Home = ()=>{
                     thumbnailLink={"https://typing.ryanwmichaud.com"}
                     titleLink={"https://github.com/ryanwmichaud/Typing"}></Project>
 
-                    
 
                     <Project title={"Harmonizer Plugin"}
                     thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}
@@ -77,5 +82,3 @@ const Home = ()=>{
 
 
 export default Home
-
-
