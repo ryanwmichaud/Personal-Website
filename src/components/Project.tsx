@@ -5,23 +5,24 @@ interface ProjectProps{
     thumbnail: string
     description: string
     technologies: string
-    titleLink: string
-    thumbnailLink: string
+    deployLink: string
+    repoLink: string
 }
 
-const Project: React.FC<ProjectProps> = ({title, thumbnail, description, technologies, titleLink, thumbnailLink})=>{
+const Project: React.FC<ProjectProps> = ({title, thumbnail, description, technologies, deployLink, repoLink})=>{
 
     return(
 
             <div className="project">
-                <a className="project-title" href={titleLink}>{title}</a>
+                <a className="project-title" href={deployLink}>{title}</a>
                 <div className="project-container">
-                    <a href={thumbnailLink}>
+                    <a href={deployLink}>
                         <img className="project-thumbnail" src={thumbnail} alt="project-thumbnail"></img>
                     </a>
                     <div className="project-description-container">
                         <p className="project-description">{description}</p>
                         <p className="project-technologies">{technologies}</p>
+                        <a className="project-repoLink" href={repoLink}>Github</a>
                     </div>
 
                 </div>

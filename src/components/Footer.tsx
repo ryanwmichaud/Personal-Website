@@ -14,10 +14,6 @@ const Footer = ()=>{
             <nav className='footer-nav-links'>
                 <Link className="footer-link" to={"/"}>Home</Link> 
                 <div className='footer-spacer'> | </div>
-                <Link className="footer-link" to={"/about"}>About</Link>
-                <div className='footer-spacer'> | </div>
-                <Link className="footer-link" to={"/projects"}>Projects</Link>
-                <div className='footer-spacer'> | </div>
                 <Link className="footer-link" to={"/resume"}>Resume</Link>
                 <div className='footer-spacer'> | </div>
                 <Link className="footer-link" to={"/contact"}>Contact</Link>

@@ -48,24 +48,24 @@ const Home = ()=>{
                    <Project title={"Chord Finder"}
                     thumbnail={"/projects/ChordFinder/Cmaj9.png"}
                     description={chordFinderDescription}
-                    technologies={"Node.js, React, Express, MYSQL"}
-                    thumbnailLink={"https://chords.ryanwmichaud.com"}
-                    titleLink={"https://github.com/ryanwmichaud/TabV4"}></Project>
+                    technologies={"Express, React, Webpack, MYSQL, HTML, CSS"}
+                    deployLink={"https://chords.ryanwmichaud.com"}
+                    repoLink={"https://github.com/ryanwmichaud/TabV4"}></Project>
 
                     <Project title={"Fret Synth"}
                     thumbnail={"/projects/Typing/typing-thumb.png"}
                     description={typingDescription}
-                    technologies={"Node.js, Vite"}
-                    thumbnailLink={"https://typing.ryanwmichaud.com"}
-                    titleLink={"https://github.com/ryanwmichaud/Typing"}></Project>
+                    technologies={"Vite, Typescript, Web Audio API, HTML, CSS"}
+                    deployLink={"https://typing.ryanwmichaud.com"}
+                    repoLink={"https://github.com/ryanwmichaud/Typing"}></Project>
 
 
                     <Project title={"Harmonizer Plugin"}
                     thumbnail={"/projects/Harmonizer/Harmonizer Demo.png"}
                     description={harmonizerDescription}
                     technologies={"C++, JUCE Framework"}
-                    thumbnailLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
-                    titleLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}></Project>
+                    deployLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}
+                    repoLink={"https://github.com/ryanwmichaud/HarmonizerPlugin"}></Project>
 
                 </div>
 
